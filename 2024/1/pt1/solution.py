@@ -1,10 +1,13 @@
+import os
+
+
 def main():
     location_ids1 = []
     location_ids2 = []
 
     total_distance = 0
 
-    with open("/Users/a/Documents/Code/adventofcode/2024/1/input.txt", "r") as input:
+    with open(f"{os.getcwd()}/input.txt", "r") as input:
         for line in input:
             nums = line.replace("\n", "").split()
 

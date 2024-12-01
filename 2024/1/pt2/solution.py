@@ -8,7 +8,7 @@ def main():
     total_distance = 0
 
     with open(
-        "/Users/a/Documents/Code/adventofcode/2024/1/input.txt", "r"
+        f"{os.getcwd()}/input.txt", "r"
     ) as input:
         for line in input:
             nums = line.replace("\n", "").split()
@@ -16,8 +16,8 @@ def main():
             location_ids1.append(int(nums[0]))
             location_ids2.append(int(nums[1]))
 
-    occur = Counter(location_ids2)
-    similarity_score = sum(num * occur[num] for num in location_ids1)
+    counts = Counter(location_ids2)
+    similarity_score = sum(num * counts[num] for num in location_ids1)
 
     for i in range(0, len(location_ids1)):
         location_ids1.sort()
