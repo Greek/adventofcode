@@ -1,15 +1,13 @@
 from collections import Counter
+import os
 
 def main():
     location_ids1 = []
     location_ids2 = []
 
-
     total_distance = 0
 
-    with open(
-        f"{os.getcwd()}/input.txt", "r"
-    ) as input:
+    with open(f"{os.getcwd()}/input.txt", "r") as input:
         for line in input:
             nums = line.replace("\n", "").split()
 
